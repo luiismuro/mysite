@@ -1,12 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import generic
-<<<<<<< HEAD
 
 class PostView(generic.View):
     def get(self, request, *args, **kwargs):
         return HttpResponse('Hello world')
-=======
+
 from blog.models import Post
 
 class PostView(generic.ListView):
@@ -17,4 +16,4 @@ class PostView(generic.ListView):
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post-detail.html'    
->>>>>>> django-admin
+
